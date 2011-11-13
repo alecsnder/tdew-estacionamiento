@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @alumno.codigo %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @alumno.nombre %>
+</p>
+
+<p>
+  <b>Dias:</b>
+  <%= @alumno.dias %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @alumno.hora %>
+</p>
+
+<p>
+  <b>Notificacion:</b>
+  <%= @alumno.notificacion %>
+</p>
+
+
+<%= link_to 'Edit', edit_alumno_path(@alumno) %> |
+<%= link_to 'Back', alumnos_path %>

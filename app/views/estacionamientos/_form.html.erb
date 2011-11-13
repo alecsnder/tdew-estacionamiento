@@ -1,0 +1,37 @@
+<%= form_for(@estacionamiento) do |f| %>
+  <% if @estacionamiento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estacionamiento.errors.count, "error") %> prohibited this estacionamiento from being saved:</h2>
+
+      <ul>
+      <% @estacionamiento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :local %><br />
+    <%= f.text_field :local %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br />
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :capacidad %><br />
+    <%= f.number_field :capacidad %>
+  </div>
+  <div class="field">
+    <%= f.label :disponible %><br />
+    <%= f.number_field :disponible %>
+  </div>
+  <div class="field">
+    <%= f.label :mensaje %><br />
+    <%= f.text_field :mensaje %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

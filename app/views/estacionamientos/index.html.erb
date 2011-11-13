@@ -1,0 +1,31 @@
+<h1>Listing estacionamientos</h1>
+
+<table>
+  <tr>
+    <th>Local</th>
+    <th>Direccion</th>
+    <th>Capacidad</th>
+    <th>Disponible</th>
+    <th>Mensaje</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @estacionamientos.each do |estacionamiento| %>
+  <tr>
+    <td><%= estacionamiento.local %></td>
+    <td><%= estacionamiento.direccion %></td>
+    <td><%= estacionamiento.capacidad %></td>
+    <td><%= estacionamiento.disponible %></td>
+    <td><%= estacionamiento.mensaje %></td>
+    <td><%= link_to 'Show', estacionamiento %></td>
+    <td><%= link_to 'Edit', edit_estacionamiento_path(estacionamiento) %></td>
+    <td><%= link_to 'Destroy', estacionamiento, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Estacionamiento', new_estacionamiento_path %>
