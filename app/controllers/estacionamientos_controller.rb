@@ -80,4 +80,12 @@ class EstacionamientosController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def rlocal
+  #link_to "login", "navigation/login"
+  end
+
+  def contador
+
+  end
 end

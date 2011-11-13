@@ -80,4 +80,13 @@ class AlumnosController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def login
+  #link_to "login", "navigation/login"
+  end
+
+  def configuracion
+
+  end
+  
 end

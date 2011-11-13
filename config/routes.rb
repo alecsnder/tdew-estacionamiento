@@ -1,4 +1,21 @@
 TdewEstacionamiento::Application.routes.draw do
+  
+  get "estacionamientos/contador"
+  
+  get "estacionamientos/rlocal"
+  
+  get "estacionamientos/home_operador"
+
+  get "alumnos/configuracion"
+  
+
+  #get "navigation/activacion"
+  
+  get "alumnos/login"
+
+  #get "navigation/home"
+  root :to => 'navigation#home'
+
   resources :alumnos
 
   resources :estacionamientos
