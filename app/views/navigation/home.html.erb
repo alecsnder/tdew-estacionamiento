@@ -1,3 +1,24 @@
-<h1>Pagina HOME</h1>
-<p>ACA VA EL SEMAFORO</p>
+<h1>¿Quieres saber si hay Estacionamiento disponible en la UPC?</h1>
+<p>Bienevenidos a Estacionamiento UPC, donde podrás saber en el momento que decidas la disponibildad de espacios en los estacionamientos de la UPC.
+</p>
+
+<p>
+<table>
+  
+
+<% @estacionamientos.each do |estacionamiento| %>
+  <tr>
+    <td><%= estacionamiento.local %></td>
+    <td><%= estacionamiento.direccion %></td>
+    <td><%= estacionamiento.capacidad %></td>
+    <td style="color:#006699; font-weight:bolder;"><%= estacionamiento.disponible %></td>
+  </tr>
+<% end %>
+</table>
+</p>
+<hr>
+<p>
+<div class="well">
 <%= link_to "Desea Configurar sus notificaciones", "alumnos/login"%>
+</div>
+</p>
